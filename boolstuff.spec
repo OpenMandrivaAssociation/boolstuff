@@ -4,11 +4,10 @@ Version: 0.1.12
 Release: %mkrel 0
 License: GPLv2+
 Group:   Development/C++
-
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Source: %{name}-%{version}.tar.gz
 URL: http://sarrazip.com/dev/boolstuff.html
-
+Patch0: boolstuff-0.1.12-gcc44-compile-fix.patch
 
 %description
 This library contains an algorithm that converts a boolean expression
@@ -24,7 +23,8 @@ A command that calls this library is also provided.
 #--------------------------------------------------------------------------#
 
 %define soname 0
-%define libname %mklibname boolstuff %soname
+%define api 0.1
+%define libname %mklibname boolstuff%{api}_ %soname
 
 %package -n %{libname}
 Summary:  Disjunctive Normal Form boolean expression library
@@ -37,12 +37,13 @@ is supported.
 
 %files -n %{libname}
 %defattr(-, root, root)
-%{_libdir}/lib*.so.%soname
+%{_libdir}/libboolstuff-%{api}.so.%{soname}*
 %{_mandir}/man3/boolstuff*
 # do we need to redistribute the GPLv2 license? (INSTALL file)
 %doc %{_defaultdocdir}/*
 
 #--------------------------------------------------------------------------#
+
 %define develname %mklibname boolstuff -d
 
 %package -n %{develname}
@@ -65,9 +66,14 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
 #--------------------------------------------------------------------------#
 %prep
 %setup -q
+%patch0 -p0 -b .compile
 
 %build
-./autogen.sh --disable-dependency-tracking --prefix=%{_prefix}
+# autoargh listao
+./autogen.sh \
+	--prefix %_prefix \
+	--libdir=%_libdir
+
 %make
 
 %install
