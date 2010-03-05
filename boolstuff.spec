@@ -1,13 +1,12 @@
-Name:    boolstuff
-Summary: Disjunctive Normal Form boolean expression library and example
-Version: 0.1.12
-Release: %mkrel 0
-License: GPLv2+
-Group:   Development/C++
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-Source: %{name}-%{version}.tar.gz
-URL: http://sarrazip.com/dev/boolstuff.html
-Patch0: boolstuff-0.1.12-gcc44-compile-fix.patch
+Name:		boolstuff
+Summary:	Disjunctive Normal Form boolean expression library and example
+Version:	0.1.13
+Release:	%mkrel 1
+License:	GPLv2+
+Group:		Development/C++
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+Source:		%{name}-%{version}.tar.gz
+URL:		http://sarrazip.com/dev/boolstuff.html
 
 %description
 This library contains an algorithm that converts a boolean expression
@@ -66,7 +65,6 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
 #--------------------------------------------------------------------------#
 %prep
 %setup -q
-%patch0 -p0 -b .compile
 
 %build
 # autoargh listao
