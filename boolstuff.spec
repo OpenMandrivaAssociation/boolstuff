@@ -1,7 +1,7 @@
 Name:		boolstuff
 Summary:	Disjunctive Normal Form boolean expression library and example
 Version:	0.1.13
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Development/C++
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
