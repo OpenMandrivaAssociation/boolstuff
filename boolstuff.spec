@@ -1,10 +1,9 @@
 Name:		boolstuff
 Summary:	Disjunctive Normal Form boolean expression library and example
 Version:	0.1.13
-Release:	%mkrel 2
+Release:	3
 License:	GPLv2+
 Group:		Development/C++
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Source:		%{name}-%{version}.tar.gz
 URL:		http://sarrazip.com/dev/boolstuff.html
 
@@ -59,7 +58,6 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
 %defattr(-, root, root)
 %{_includedir}/*
 %{_libdir}/lib*.so
-%{_libdir}/lib*.la
 %{_libdir}/pkgconfig/*
 
 #--------------------------------------------------------------------------#
@@ -75,10 +73,30 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
 %make
 
 %install
-rm -fR $RPM_BUILD_ROOT
 %makeinstall_std
 
-%clean
-rm -fR $RPM_BUILD_ROOT
+
+
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.13-2mdv2011.0
++ Revision: 610084
+- rebuild
+
+* Fri Mar 05 2010 Sandro Cazzaniga <kharec@mandriva.org> 0.1.13-1mdv2010.1
++ Revision: 514391
+- use tab in spec
+- update to 1.1.13
+- drop old patch that it was apply upstream
+
+* Fri Jun 26 2009 Helio Chissini de Castro <helio@mandriva.com> 0.1.12-0mdv2010.0
++ Revision: 389502
+- Added compilation patch for gcc 4.4
+- Fixed build and library soname
+
+  + Paulo Ricardo Zanoni <pzanoni@mandriva.com>
+    - Improve .spec file (by heliocastro)
+    - imported package boolstuff
 
 
