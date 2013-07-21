@@ -1,10 +1,10 @@
 Name:		boolstuff
 Summary:	Disjunctive Normal Form boolean expression library and example
-Version:	0.1.13
-Release:	3
+Version:	0.1.14
+Release:	1
 License:	GPLv2+
 Group:		Development/C++
-Source:		%{name}-%{version}.tar.gz
+Source:		http://sarrazip.com/dev/%{name}-%{version}.tar.gz
 URL:		http://sarrazip.com/dev/boolstuff.html
 
 %description
@@ -98,5 +98,6 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
   + Paulo Ricardo Zanoni <pzanoni@mandriva.com>
     - Improve .spec file (by heliocastro)
     - imported package boolstuff
+
 
 
