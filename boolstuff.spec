@@ -1,6 +1,6 @@
 Name:		boolstuff
 Summary:	Disjunctive Normal Form boolean expression library and example
-Version:	0.1.14
+Version:	0.1.15
 Release:	1
 License:	GPLv2+
 Group:		Development/C++
@@ -68,7 +68,7 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
 # autoargh listao
 ./autogen.sh \
 	--prefix %_prefix \
-	--libdir=%_libdir
+	--libdir=%{_libdir}
 
 %make
 
@@ -98,6 +98,7 @@ C++ header files for the Disjunctive Normal Form boolean expression library.
   + Paulo Ricardo Zanoni <pzanoni@mandriva.com>
     - Improve .spec file (by heliocastro)
     - imported package boolstuff
+
 
 
 

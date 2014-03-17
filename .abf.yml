@@ -1,4 +1,5 @@
 removed_sources:
   boolstuff-0.1.13.tar.gz: 505408bbc0585c6d9ad92f62cc5d8ff4c4e99dec
-sources:
   boolstuff-0.1.14.tar.gz: b69e1041f5754caac231a9fbaae313d766f6651a
+sources:
+  boolstuff-0.1.15.tar.gz: 886d5fe9a068ba8d8808e24ed7e12e338198bfae
