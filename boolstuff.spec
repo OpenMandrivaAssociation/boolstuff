@@ -1,6 +1,6 @@
 Name:		boolstuff
 Summary:	Disjunctive Normal Form boolean expression library and example
-Version:	0.1.16
+Version:	0.1.17
 Release:	1
 License:	GPLv2+
 Group:		Development/C++
