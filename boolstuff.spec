@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv2+
 Group:		Development/C++
 Source:		http://sarrazip.com/dev/%{name}-%{version}.tar.gz
-URL:		http://sarrazip.com/dev/boolstuff.html
+URL:		https://sarrazip.com/dev/boolstuff.html
 
 %description
 This library contains an algorithm that converts a boolean expression
